@@ -60,9 +60,7 @@ jobs:
           cp -r data/ public/
 
       - name: Log the public/ directory structure
-        run: |
-          apt-get update && apt-get install -y tree
-          tree public/
+        run: find public/ -type f
 
       ############################################################################
       # Run tests
